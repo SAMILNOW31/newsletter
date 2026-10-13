@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3·1 NOW | 3·1 NEWS 2026년 10월 소식</title>
+  <style>
+    @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+    @import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css");
+    :root{--pad:50px;--blue:#2f6ca3;--beige:#a89c88;--navy:#2b4885}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:#ecebe5}
+    img{display:block;max-width:100%}
+    .board-news{width:100%;max-width:720px;margin:0 auto;padding-bottom:80px;color:#111;background:#fff;font-family:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",Arial,sans-serif;line-height:1.65;overflow:hidden}
+
+    /* header */
+    .board-header{position:relative;height:145px;background:#9fab7e url("assets/landing-top-bg.png") center/auto 100% no-repeat}
+    .board-meta{position:absolute;right:50px;top:55px;height:42px;padding:0 24px;display:flex;align-items:center;border-radius:21px;background:#fff;color:#111;font-family:Paperlogy,"Pretendard Variable",sans-serif;font-size:15.5px;white-space:nowrap;letter-spacing:-.02em}
+    .board-meta strong{font-weight:700}
+    .board-meta i{display:inline-block;width:1px;height:14px;margin:0 7px;background:#111}
+
+    /* item */
+    .item{position:relative;margin:82px var(--pad) 0;padding-top:0}
+    .board-header+.item{margin-top:51px}
+    .item:before{content:"";display:block;height:4px;background:linear-gradient(90deg,#a3ad82,#a1a29c)}
+    .item-title{display:flex;gap:0;margin:27px 0 28px;font-size:28px;line-height:1.3;font-weight:800;letter-spacing:-.05em;word-break:keep-all}
+    .item-title .num{flex:0 0 58px;color:#9eae77}
+    .item-photo{border:1px solid #111}
+    .item-photo img{width:100%;height:auto}
+    .item p{margin:22px 0 0;font-size:18px;line-height:1.65;letter-spacing:-.04em}
+
+    /* 01 infographic */
+    .stats{display:grid;grid-template-columns:182px 1fr;gap:26px;margin-top:56px}
+    .stat{font-family:Paperlogy,"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;border-radius:27px;color:#fff;background:linear-gradient(90deg,var(--blue),var(--beige))}
+    .stat.tall{display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:34px 0 28px;background:linear-gradient(180deg,var(--blue),var(--beige));text-align:center}
+    .stat h3{margin:0;font-size:21px;line-height:1.25;font-weight:600;letter-spacing:-.04em}
+    .stat.tall img{width:127px;height:auto}
+    .stat.tall p{margin:0;font-size:16px;line-height:1.3;font-weight:300;letter-spacing:-.04em;text-align:center}
+    .stat.tall .lead{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+    .stat.tall .detail p{text-align:left}
+    .stat b{font-weight:600}
+    .stat.tall p b{font-size:23px}
+    .stat-col{display:grid;gap:22px}
+    .stat.wide{display:grid;grid-template-columns:150px 1fr;column-gap:22px;align-items:center;min-height:173px;padding:0 24px 0 0}
+    .stat.wide .lead{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+    .stat.wide .lead img{height:auto}
+    .stat.wide .lead.cap img{width:68px}
+    .stat.wide .lead.bank img{width:50px}
+    .stat.wide .detail p{margin:0;font-size:18px;line-height:1.4;font-weight:300;letter-spacing:-.04em;text-align:left}
+    .stat.wide .detail p b{font-size:27px;letter-spacing:-.05em}
+    .stat.wide .detail p small{font-size:16px;font-weight:300}
+    .item .stat p{margin:0}
+
+    /* 02 process */
+    .process{font-family:Paperlogy,"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;display:grid;grid-template-columns:343px 1fr;margin-top:29px}
+    .process-card{background:var(--navy);color:#fff}
+    .process-card .shot{position:relative}
+    .process-card .shot:after{content:"";position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(180deg,rgba(45,74,136,0),#2d4a88)}
+    .process-card img{width:100%;height:auto}
+    .process-card .criteria{padding:38px 36px 30px;background:linear-gradient(180deg,#2d4a88,#37518c)}
+    .process-card h3{margin:0 0 14px;font-size:24px;line-height:1.3;font-weight:700;letter-spacing:-.05em}
+    .process-card ul{margin:0;padding:0;list-style:none}
+    .process-card li{position:relative;padding-left:.7em;font-size:16px;line-height:1.8;font-weight:300;letter-spacing:-.04em}
+    .process-card li:before{content:"·";position:absolute;left:0}
+    .steps{position:relative;margin:0;padding:2px 0 0 48px;list-style:none}
+    .steps:before{content:"";position:absolute;left:28px;top:25px;bottom:25px;border-left:2px dotted var(--navy)}
+    .steps li{position:relative;display:flex;align-items:center;margin:0 0 25px}
+    .steps li:last-child{margin-bottom:0}
+    .steps li:before{content:"";position:absolute;left:-23px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--navy)}
+    .steps span{display:inline-flex;align-items:center;gap:8px;height:47px;padding:0 20px;border:1.5px solid #222;border-radius:24px;background:#fff;font-size:18px;font-weight:500;letter-spacing:-.04em;white-space:nowrap}
+    .steps b{font-size:20px;font-weight:800}
+
+    @media screen and (max-width:600px){
+      :root{--pad:22px}
+      .board-header{height:92px;background-position:left top}
+      .board-meta{right:16px;top:30px;height:30px;padding:0 11px;font-size:9px;border-radius:15px}
+      .board-meta i{height:9px;margin:0 4px}
+      .item{margin-top:50px}
+      .board-header+.item{margin-top:28px}
+      .item-title{font-size:22px;margin:18px 0 16px}
+      .item-title .num{flex-basis:38px}
+      .item p{font-size:18px;margin-top:16px}
+      .stats{grid-template-columns:1fr;margin-top:28px;gap:14px}
+      .stat.tall,.stat.wide{display:grid;grid-template-columns:96px minmax(0,156px);justify-content:center;column-gap:8px;align-items:center;min-height:130px;padding:0 12px}
+      .stat.tall{background:linear-gradient(90deg,var(--blue),var(--beige));text-align:left}
+      .stat.tall .lead,.stat.wide .lead{align-items:center;gap:8px;width:max-content;max-width:100%;text-align:center}
+      .stat.tall .lead img{width:50px}
+      .stat.tall .detail p{font-size:13px;text-align:left}
+      .stat.tall .detail p b{font-size:19px}
+      .stat-col{gap:14px}
+      .stat.wide .detail p{font-size:13px;text-align:left}
+      .stat.wide .detail p b{font-size:19px}
+      .stat.wide .lead.cap img{width:50px}.stat.wide .lead.bank img{width:38px}
+      .stat h3{font-size:16px}
+      .process{grid-template-columns:1fr;margin-top:18px}
+      .process-card .criteria{padding:26px 22px}
+      .process-card h3{font-size:18px}
+      .process-card li{font-size:14px}
+      .steps{padding:26px 0 0 38px}
+      .steps:before{left:18px;top:50px}
+      .steps li:before{left:-23px}
+      .steps span{height:40px;font-size:15px}
+      .steps b{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <main class="board-news">
+    <header class="board-header">
+      <div class="board-meta"><strong>3·1 NEWS</strong><i></i><span>2026년 10월 소식</span></div>
+    </header>
+
+    <section class="item">
+      <h2 class="item-title"><span class="num">01</span><span>2026학년도 3·1장학생 선발 및 장학금 지급</span></h2>
+      <figure class="item-photo" style="margin:0"><img src="assets/news-01.jpg" alt="장학증서를 전달하는 장면"></figure>
+      <div class="stats">
+        <div class="stat tall">
+          <div class="lead"><h3>장학생 선발</h3><img src="assets/news-vector-1.png" alt=""></div>
+          <div class="detail"><p>박사과정 장학생<br>최종 <b>37명</b> 선발</p></div>
+        </div>
+        <div class="stat-col">
+          <div class="stat wide">
+            <div class="lead cap"><h3>장학금 지원</h3><img src="assets/news-vector-2.png" alt=""></div>
+            <div class="detail"><p>2026년 2학기 장학금 지원<br><b>1억 4,800만 원</b><br>1년간 <b>총 3억 원</b> 규모</p></div>
+          </div>
+          <div class="stat wide">
+            <div class="lead bank"><h3>누적 대학원<br>장학 수혜</h3><img src="assets/news-vector-3.png" alt=""></div>
+            <div class="detail"><p>1961~2025년<br><b>총 3,579명</b> <small>수혜</small><br><b>약 52억 원</b> <small>장학금 지급</small></p></div>
+          </div>
+        </div>
+      </div>
+      <p>2026학년도 3·1장학생 모집(7월 6일~7월 26일) 결과, 엄정한 심사를 거쳐 총 37명의 박사과정 학생이 최종 선발되었습니다. 3·1문화재단은 다양한 분야에서 학문과 연구에 매진하는 인재들이 안정적으로 활동을 이어갈 수 있도록 지속적으로 지원하고 있습니다. 이번에 선발된 장학생들에게는 2026년 2학기 장학금 1억 4,800만 원을 시작으로, 1년간 총 3억 원 규모의 장학금이 지급될 예정입니다. 이번 장학금이 장학생들의 학문적 성취를 뒷받침하는 든든한 기반이 되기를 기대합니다.</p>
+    </section>
+
+    <section class="item">
+      <h2 class="item-title"><span class="num">02</span><span>제68회 3·1문화상 후보자 추천 접수 마감 및<br>심사위원회 착수</span></h2>
+      <div class="process">
+        <div class="process-card">
+          <div class="shot"><img src="assets/news-02.jpg" alt="심사 회의 장면"></div>
+          <div class="criteria">
+            <h3>공정한 심사를 위한 기준</h3>
+            <ul>
+              <li>위원 정원 2/3 이상 출석 시 회의 성립</li>
+              <li>후보자 선정은 출석위원 2/3 이상 찬성</li>
+              <li>모든 의결은 무기명 투표</li>
+              <li>심사위원은 이해관계가 있는 후보의 심사를 기피할 수 있음</li>
+            </ul>
+          </div>
+        </div>
+        <ol class="steps">
+          <li><span><b>01</b> 후보자 모집</span></li>
+          <li><span><b>02</b> 심사위원회 구성</span></li>
+          <li><span><b>03</b> 분과위원장 회의</span></li>
+          <li><span><b>04</b> (분과별) 심사</span></li>
+          <li><span><b>05</b> (수상 대상자) 검증</span></li>
+          <li><span><b>06</b> (수상자) 인준</span></li>
+          <li><span><b>07</b> (수상자) 발표</span></li>
+          <li><span><b>08</b> 시상식</span></li>
+        </ol>
+      </div>
+      <p style="margin-top:36px">지난 7월 1일부터 진행된 ‘제68회 3·1문화상’ 후보자 추천 접수가 9월 10일 마감되었습니다. 현재 학술(인문사회과학), 학술(자연과학), 예술, 기술·공학 등 각 분야의 전문가로 심사위원회 구성을 마쳤으며, 분과위원장 회의와 분야별 심사, 검증 등의 절차를 거쳐 수상자를 선정할 예정입니다. 3·1문화재단은 공정하고 신중한 심사를 바탕으로 심사 전 과정을 충실히 이어가겠습니다.</p>
+    </section>
+
+    <section class="item">
+      <h2 class="item-title"><span class="num">03</span><span>굿굿시리즈 신간 출간 및 출간 예정 소식</span></h2>
+      <figure class="item-photo" style="margin:0"><img src="assets/news-03.jpg" alt="굿굿시리즈 신간 《사라지는 일, 살아남는 사람》"></figure>
+      <p>재단의 교양 단행본 시리즈 ‘굿굿시리즈’의 24번째 도서 《나의 이기심이 세상을 구한다면》(손봉호 저)이 지난 6월 출간되었습니다. 우리 사회의 윤리적 성찰과 이타성에 대한 깊이 있는 통찰을 담은 책으로, 독자 여러분의 많은 관심 바랍니다. 이어 9월에는 미래 전망을 주제로 한 25번째 도서 《사라지는 일, 살아남는 사람》(이찬 저)을 선보였습니다. 굿굿시리즈가 전하는 새로운 이야기에도 많은 관심과 기대 바랍니다.</p>
+    </section>
+
+    <section class="item">
+      <h2 class="item-title"><span class="num">04</span><span>천안아산 다문화엄마학교 8차년도 성료 및<br>9차년도(17기) 개강</span></h2>
+      <figure class="item-photo" style="margin:0"><img src="assets/news-04.jpg" alt="다문화엄마학교 졸업생과 신입생"></figure>
+      <p>재단이 후원하는 천안아산 다문화엄마학교가 8차년도 교육 사업을 성공적으로 마무리했습니다. 8차년도 과정에서는 15기 11명(12명 입학), 16기 13명(14명 입학) 등 총 24명의 다문화 가정 어머니가 전 과정을 이수하며 뜻깊은 졸업의 결실을 맺었습니다. 이어 2026학년도 하반기에는 17기 신입생 10명이 새롭게 입학해 9차년도 교육을 시작했으며, 자녀 교육과 사회 적응을 위한 다양한 배움을 이어가고 있습니다.</p>
+    </section>
+  </main>
+</body>
+</html>
